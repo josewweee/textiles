@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!-- Meta Tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <meta name="description" content="150 words">
+    <meta name="author" content="uipasta">
+    <meta name="url" content="http://www.yourdomainname.com">
+    <meta name="copyright" content="company name">
+    <meta name="robots" content="index,follow">
+
+
+    <title>Productos</title>
+
+ </head>
+
+
+ <body>
+
+
+    <div class="row register-form">
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <div role="form" action="" method="post" class="r-form">
+
+                            <div class="form-group">
+                                <label class="sr-only" for="r-form-first-name">Nombre</label>
+                                <input type="text" placeholder="nombre" id="nombre">
+                            </div>
+
+                            <div class="form-group">
+                               <label class="sr-only" for="r-form-first-name">Marca</label>
+                                <input type="text" placeholder="marca" id="marca">
+                            </div>
+
+                            <div class="form-group">
+                               <label class="sr-only" for="r-form-first-name">Precio</label>
+                                <input type="text" placeholder="precio" id="precio">
+                            </div>
+
+                            <div class="form-group">
+                               <label class="sr-only" for="r-form-first-name">Tipo</label>
+                                <input type="text" placeholder="Tipo" id="tipo">
+                            </div>
+                            
+                            <h3>Imagen, Montarla en cualquier resolucion</h3>
+
+                            <div id="preview"><img src="" alt="Preview"/> </div>
+
+                            <input type="file" id="file" accept="image/*">
+                            <!--<form action="/action_page.php">
+                                
+                            </form> -->
+
+                            <button type="submit" class="btn" onclick="Añadir()">Montar producto, tarda 15 segundos</button>
+
+                        </div>
+                    </div>
+    </div>
+
+    <br>
+    <br>
+    <h3>Buscador de productos (Busca por id y por nombre)</h3>
+    <input id="srchFld" class="srchTxt" type="text" />
+    <button type="submit" id="submitButton"  onclick="Buscar()" class="btn btn-primary">Go</button>
+
+    <ul class="thumbnails" id="fotos_Busqueda">
+
+    </ul>
+
+    <br>
+    <br>
+    <h3>Actualizar Imagenes de Productos</h3>
+    <label class="sr-only" for="r-form-first-name">ID del producto a actualizar</label>
+    <br>
+    <input id="ID_producto" class="srchTxt" type="text" />
+    <br>
+    <br>
+    <div id="preview2"><img src="" alt="Preview2"/> </div>
+    <form action="/action_page.php">
+        <input type="file" id="file2" accept="image/*">
+    </form>
+
+    <button type="submit" id="submitButton"  onclick="Actualizar()" class="btn btn-primary">Actualizar Producto</button>
+
+
+
+<!--   <div class="row register-form">
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <div role="form" action="" method="post" class="r-form">
+
+                            <div class="form-group">
+                                <label class="sr-only" for="r-form-first-name">Recomendado</label>
+                                <input type="text" placeholder="meta cualquier valor aca, no importa" id="recomendado">
+                           </div>
+
+                            <button type="submit" class="btn" onclick="Agregar()">Agregar!</button>
+
+                        </div>
+                    </div>
+    </div> -->
+
+
+        <!--Firebase Scripts -->
+        <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+        <!-- Javascript -->
+        <script src="../../public/js/crearProductosDB.js"></script>
+        <!--jQuery -->
+        <script src="../../public/js/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+            integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+            crossorigin="anonymous">
+    </script>
+
+    </body>
+ </html>

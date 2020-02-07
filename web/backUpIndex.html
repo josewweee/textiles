@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html>
+<!--
+class="loading">
+-->
+<head>
+  <title>Barbero &mdash; Express</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="author" content="Ramla Software">
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  <meta name="viewport" content="width=device-width,   initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- GOOGLE -->
+   <meta name="google-signin-client_id" content="634083713883-822sguv0b9eop1igmerqkp8hhi12dk94.apps.googleusercontent.com">
+   <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="FrontEnd/images/favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="FrontEnd/css/bootstrap.min.css">
+  <link rel="stylesheet" href="FrontEnd/css/style.css">
+  <link rel="stylesheet" href="FrontEnd/css/style-responsive.css">
+  <link rel="stylesheet" href="FrontEnd/css/animate.min.css">
+  <link rel="stylesheet" href="FrontEnd/css/vertical-rhythm.min.css">
+  <link rel="stylesheet" href="FrontEnd/css/owl.carousel.css">
+  <link rel="stylesheet" href="FrontEnd/css/magnific-popup.css">
+  <link rel="stylesheet" href="FrontEnd/css/YTPlayer.css">
+
+
+</head>
+
+<body class="appear-animate" onload="onLoad()">
+
+  <!-- Page Loader 
+  <div class="page-loader">
+    -->
+  <div class="page-loader">
+
+    <!--
+    <div class="loader">Cargando...</div>
+  -->
+  </div>
+  <!-- End Page Loader -->
+
+  <!-- Page Wrap -->
+  <div class="page" id="top">
+
+    <!-- Home Section -->
+    <section class="home-section bg-dark-alfa-30 fixed-height-small" data-background="FrontEnd/images/implementosDark.jpg" id="home">
+      <div class="js-height-parent container">
+
+        <!-- Video BG Init -->
+        <div class="player" data-property="">
+          <!--"{videoURL:'http://youtu.be/I6jmZ5plZ3o',containment:'#home',autoPlay:true, showControls:false, showYTLogo: false, mute:true, startAt:0, opacity:1}"-->
+        </div>
+        <!-- End Video BG Init -->
+
+        <!-- Hero Content -->
+        <div class="home-content">
+          <div class="home-text">
+
+            <h1 class="hs-line-8 no-transp font-alt mb-50 mb-xs-30">
+                                Cuchillas / Tijeras / Máquinas / Espumas
+                            </h1>
+
+            <h2 class="hs-line-14 font-alt mb-50 mb-xs-30">
+                                Barbero Express
+                            </h2>
+
+            <div class="local-scroll">
+              <!-- <a href="#about" class="btn btn-mod btn-border-w btn-medium btn-round hidden-xs">See More</a> -->
+
+              <a href="#about" class="btn btn-mod btn-border-w btn-medium btn-round hidden-xs" href="https://www.instagram.com/barberoexpress/">Instagram</a>
+              <span class="hidden-xs">&nbsp;</span>
+              <!-- <a href="http://vimeo.com/50201327" class="btn btn-mod btn-border-w btn-medium btn-round lightbox mfp-iframe">Play Reel</a> -->
+              <a class="btn btn-mod btn-border-w btn-medium btn-round lightbox mfp-iframe" href="FrontEnd/vistas/buscar-4columnas.html">Ver Productos</a>
+            </div>
+
+          </div>
+        </div>
+        <!-- End Hero Content -->
+
+      </div>
+    </section>
+    <!-- End Home Section -->
+
+
+    <!-- Navigation panel -->
+    <nav class="main-nav dark transparent stick-fixed">
+      <div class="full-wrapper relative clearfix">
+        <!-- Logo ( * your text or image into link tag *) -->
+        <div class="nav-logo-wrap local-scroll" style="padding-top: 10px;">
+          <a href="#top" class="logo" id="infoUsuario">
+              <img align="left" src="FrontEnd/images/logo/logoWhiteNavBar.png"/><p>BE</p>
+          </a>
+        </div>
+        <div class="mobile-nav">
+          <i class="fa fa-bars"></i>
+        </div>
+        <!-- Main Menu -->
+        <div class="inner-nav desktop-nav">
+          <ul class="clearlist scroll-nav local-scroll">
+              <li class="active"><a href="index.html">Inicio</a></li>
+              <li><a href="FrontEnd/vistas/buscar-4columnas.html">Productos</a></li>
+              <li id="iniciar/cerrar"><a href="FrontEnd/vistas/login.html">iniciar sesión</a></li>
+              <li id="cantidadPedidos"><a href="FrontEnd/vistas/carritoCompras.html"><i class="fa fa-shopping-cart"></i> Carrito(0)</a></li>
+              <li><a href="FrontEnd/vistas/terminosLegales.html">Terminos legales</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navigation panel -->
+
+
+    <!-- About Section -->
+    <section class="page-section" id="about">
+      <div class="container relative">
+
+        <h2 class="section-title font-alt align-left mb-70 mb-sm-40">
+          Productos Estrella
+        </h2>
+
+        <div class="row" id="imagenes_recomendados">
+
+        </div>
+
+
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Divider -->
+    <hr class="mt-0 mb-0 " />
+    <!-- End Divider -->
+
+
+    <!-- Call Action Section -->
+    <section class="small-section bg-dark">
+      <div class="container relative">
+
+        <div class="align-center">
+          <h3 class="banner-heading font-alt">Promociones</h3>
+          <div class="local-scroll">
+            <a href="#contact" class="btn btn-mod btn-w btn-medium btn-round">Ver Ofertas</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Call Action Section -->
+
+
+    <!-- Portfolio Section -->
+    <section class="page-section pb-0" id="portfolio">
+      <div class="relative" id="ayudaJesus">
+
+        <h2 class="section-title font-alt mb-70 mb-sm-40">
+          Productos
+        </h2>
+
+        <!-- Works Filter -->
+        <div class="works-filter font-alt align-center">
+          <!-- <a href="#" class="filter active" data-filter="*">Todos</a> -->
+          <!-- <a href="#branding" class="filter" data-filter=".branding">Máquinas</a>
+          <a href="#design" class="filter" data-filter=".design">Tijeras</a>
+          <a href="#photography" class="filter" data-filter=".photography">Photography</a> -->
+          <a href="#general" class="filter active" data-filter=".general" onclick="imagenesPortafolioGeneral()">Resumen</a>
+          <a href="#barberasCuchillas" class="filter" data-filter=".barberasCuchillas" onclick="imagenesTipos('barberas','cuchillas')">Barberas/Cuchillas</a>
+          <a href="#maquinas" class="filter" data-filter=".maquinas" onclick="imagenesTipos('maquinas','*')">Máquinas</a>
+          <a href="#tijeras" class="filter" data-filter=".tijeras" onclick="imagenesTipos('tijeras','*')">Tijeras</a>
+          <a href="#sacudidoresOtros" class="filter" data-filter=".sacudidoresOtros" onclick="imagenesTipos('sacudidores','otros')">Sacudidores/Otros</a>
+          <a href="#cerasGel" class="filter" data-filter=".cerasGel" onclick="imagenesTipos('ceras','gel')">Ceras/Gel</a>
+          <a href="#tonicosEspumas" class="filter" data-filter=".tonicosEspumas" onclick="imagenesTipos('tonicos','espumas')">Tónicos/Espumas</a>
+
+        </div>
+        <!-- End Works Filter -->
+
+        <!-- Works Grid -->
+        <!-- <div id="tipos"> -->
+          <ul class="works-grid work-grid-3 work-grid-gut clearfix font-alt hover-white hide-titles" id="work-grid">
+
+            <!-- Work Item (External Page) -->
+            <li class="work-item mix general barberasCuchillas">
+              <a class="work-ext-link" onclick="BuscarINDEX('barbera','cuchilla')">
+                <div class="work-img">
+                  <img class="work-img" src="FrontEnd/images/portafolio/barbera.jpg" alt="Work" />
+                </div>
+                <div class="work-intro">
+                  <h3 class="work-title">Barberas/Cuchillas</h3>
+                  <div class="work-descr">
+                    La mejor calidad
+                  </div>
+                </div>
+              </a>
+              <div class="">
+                <p class="text-center">BARBERAS/CUCHILLAS</p>
+              </div>
+            </li>
+            <!-- End Work Item -->
+
+            <!-- Work Item (Lightbox) -->
+            <li class="work-item mix general">
+              <a class="work-ext-link" onclick="BuscarINDEX('maquina','*')">
+                <div class="work-img">
+                  <img src="FrontEnd/images/portafolio/maquina.jpg" alt="Work" />
+                </div>
+                <div class="work-intro">
+                  <h3 class="work-title">Máquinas</h3>
+                  <div class="work-descr">
+                    Las mejores marcas
+                  </div>
+                </div>
+              </a>
+              <div class="">
+                <p class="text-center">MÁQUINAS</p>
+                <!-- <p class="text-center">TÓNICO <br> $2.500</p> -->
+              </div>
+            </li>
+            <!-- End Work Item -->
+
+            <!-- Work Item (External Page) -->
+            <li class="work-item mix general">
+              <a class="work-ext-link" onclick="BuscarINDEX('tijera','*')">
+                <div class="work-img">
+                  <img class="work-img" src="FrontEnd/images/portafolio/tijeras.jpg" alt="Work" />
+                </div>
+                <div class="work-intro">
+                  <h3 class="work-title">Tijeras</h3>
+                  <div class="work-descr">
+                    Diseños especiales
+                  </div>
+                </div>
+              </a>
+              <div class="">
+                <p class="text-center">TIJERAS</p>
+              </div>
+            </li>
+            <!-- End Work Item -->
+
+            <!-- Work Item (External Page) -->
+            <li class="work-item mix general">
+              <a class="work-ext-link" onclick="BuscarINDEX('sacudidor','otros')">
+                <div class="work-img">
+                  <img class="work-img" src="FrontEnd/images/portafolio/brush.jpg" alt="Work" />
+                </div>
+                <div class="work-intro">
+                  <h3 class="work-title">Sacudidor/Otros</h3>
+                  <div class="work-descr">
+                    El mejor complemento para tu trabajo.
+                  </div>
+                </div>
+              </a>
+              <div class="">
+                <p class="text-center">SACUDIDORES/OTROS</p>
+              </div>
+            </li>
+            <!-- End Work Item -->
+
+            <!-- Work Item (External Page) -->
+            <li class="work-item mix general">
+              <a class="work-ext-link"  onclick="BuscarINDEX('cera','gel')">
+                <div class="work-img">
+                  <img class="work-img" src="FrontEnd/images/portafolio/crazyGel.jpg" alt="Work" />
+                </div>
+                <div class="work-intro">
+                  <h3 class="work-title">Ceras/Gel</h3>
+                  <div class="work-descr">
+                    Excelentes fragancias y calidad.
+                  </div>
+                </div>
+              </a>
+              <div class="">
+                <p class="text-center">CERAS/GEL</p>
+              </div>
+            </li>
+            <!-- End Work Item -->
+
+            <!-- Work Item (External Page) -->
+            <li class="work-item mix general">
+              <a class="work-ext-link"  onclick="BuscarINDEX('tonico','espuma')">
+                <div class="work-img">
+                  <img class="work-img" src="FrontEnd/images/portafolio/espuma.jpg" alt="Work" />
+                </div>
+                <div class="work-intro">
+                  <h3 class="work-title">Tónicos/Espumas</h3>
+                  <div class="work-descr">
+                    Las mejores marcas de América
+                  </div>
+                </div>
+              </a>
+              <div class="">
+                <p class="text-center">TÓNICOS/ESPUMAS</p>
+              </div>
+            </li>
+            <!-- End Work Item -->
+
+
+          </ul>
+          <!-- End Works Grid -->
+        <!-- </div> -->
+
+
+      </div>
+    </section>
+    <div id="VerMas"></div>
+    <!-- End Portfolio Section -->
+
+
+
+
+    <!-- Newsletter Section -->
+    <section class="small-section bg-dark">
+      <div class="container relative">
+
+        <form class="form align-center" id="mailchimp">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+              <div class="newsletter-label font-alt">
+                Seguir informado de nuevas ofertas
+              </div>
+
+              <div class="mb-20">
+                <input placeholder="Ingrese su teléfono" class="newsletter-field form-control input-md round mb-xs-10" id="telefonoUsuario" type="text" pattern=".{5,100}" require/>
+
+                <button type="submit" class="btn btn-mod btn-medium btn-round mb-xs-10" onClick = "ingresarTelefono()">
+                  Suscribirse
+                </button>
+              </div>
+
+              <div class="form-tip">
+                <i class="fa fa-info-circle"></i> Por favor confía en nosotros, nunca te enviaremos spam
+              </div>
+
+              <!-- <div id="subscribe-result"></div> -->
+
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+    <!-- End Newsletter Section -->
+
+
+    <!-- Contact Section -->
+    <section class="page-section" id="contact">
+      <div class="container relative">
+
+        <h2 class="section-title font-alt mb-70 mb-sm-40">
+                        Contacto
+                    </h2>
+
+        <div class="row mb-60 mb-xs-40">
+
+          <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+
+              <!-- Phone -->
+              <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                <div class="contact-item">
+                  <div class="ci-icon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <div class="ci-title font-alt">
+                    Llámanos
+                  </div>
+                  <div class="ci-text">
+                    +57 (4) 305 240 75 19
+                  </div>
+                </div>
+              </div>
+              <!-- End Phone -->
+
+              <!-- Address -->
+              <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                <div class="contact-item">
+                  <div class="ci-icon">
+                    <i class="fa fa-map-marker"></i>
+                  </div>
+                  <div class="ci-title font-alt">
+                    Dirección
+                  </div>
+                  <div class="ci-text">
+                    Crra 45 1 191, Medellín
+                  </div>
+                </div>
+              </div>
+              <!-- End Address -->
+
+              <!-- Email -->
+              <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                <div class="contact-item">
+                  <div class="ci-icon">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <div class="ci-title font-alt">
+                    Email
+                  </div>
+                  <div class="ci-text">
+                    <a href="mailto:info@barberoexpress.com">info@barberoexpress.com</a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Email -->
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+
+            <form class="form contact-form" id="contact_form">
+              <div class="clearfix">
+
+                <div class="cf-left-col">
+
+                  <!-- Name -->
+                  <div class="form-group">
+                    <input type="text" name="name" id="name" class="input-md round form-control" placeholder="Nombre" pattern=".{3,100}" required>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form-group">
+                    <input type="email" name="email" id="email" class="input-md round form-control" placeholder="Email" pattern=".{5,100}" required>
+                  </div>
+
+                </div>
+
+                <div class="cf-right-col">
+
+                  <!-- Message -->
+                  <div class="form-group">
+                    <textarea name="message" id="message" class="input-md round form-control" style="height: 84px;" placeholder="Mensaje"></textarea>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="clearfix">
+
+                <div class="cf-left-col">
+
+                  <!-- Inform Tip -->
+                  <div class="form-tip pt-20">
+                    <i class="fa fa-info-circle"></i> Ingrese todos los datos
+                  </div>
+
+                </div>
+
+                <div class="cf-right-col">
+
+                  <!-- Send Button -->
+                  <div class="align-right pt-10">
+                    <button class="submit_btn btn btn-mod btn-medium btn-round" id="submit_btn">Enviar Mensaje</button>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+              <div id="result"></div>
+            </form>
+
+            <form method="POST" action="https://formspree.io/info@ramlasoftware.com">
+              <input type="email" name="email" placeholder="Your email">
+              <textarea name="message" placeholder="Your message"></textarea>
+              <button type="submit">Send</button>
+            </form>
+
+          </div>
+        </div>
+        <!-- End Contact Form -->
+
+      </div>
+    </section>
+    <!-- End Contact Section -->
+
+
+    <!-- Google Map -->
+    <div class="google-map">
+
+      <div data-address="Torres de Patio Bonito, Carrera 45, Medellín, Antioquia" id="map-canvas"></div>
+
+      <div class="map-section">
+
+        <div class="map-toggle">
+          <div class="mt-icon">
+            <i class="fa fa-map-marker"></i>
+          </div>
+          <div class="mt-text font-alt">
+            <div class="mt-open">Abrir mapa <i class="fa fa-angle-down"></i></div>
+            <div class="mt-close">Cerrar mapa <i class="fa fa-angle-up"></i></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- End Google Map -->
+
+
+    <!-- Foter -->
+    <footer class="page-section bg-gray-lighter footer pb-60">
+      <div class="container">
+
+        <!-- Footer Logo -->
+        <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.2s">
+          <a href="#top"><img src="FrontEnd/images/logoDark.png" width="150" height="70" alt="" /></a>
+        </div>
+        <!-- End Footer Logo -->
+
+        <!-- Social Links -->
+        <div class="footer-social-links mb-110 mb-xs-60">
+          <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
+        </div>
+        <!-- End Social Links -->
+
+        <!-- Footer Text -->
+        <div class="footer-text">
+
+          <!-- Copyright -->
+          <div class="footer-copy font-alt">
+            <a href="#" target="_blank">&copy; Barbero Express 2018</a>.
+          </div>
+          <!-- End Copyright -->
+
+          <div class="footer-made">
+            Desarrollado por Ramla Software.
+          </div>
+
+        </div>
+        <!-- End Footer Text -->
+
+      </div>
+
+
+      <!-- Top Link -->
+      <div class="local-scroll">
+        <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+      </div>
+      <!-- End Top Link -->
+
+    </footer>
+    <!-- End Foter -->
+  </div>
+  <!-- End Page Wrap -->
+
+
+  <!-- JS -->
+  <!--BASE DE DATOS -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+  <!-- FIREBASE Y FUNCIONES GENERICAS -->
+  <script type="text/javascript" src="js/firebaseBarbero.js"></script>
+
+  <!-- JS PERSONALIZADO -->
+  <script type="text/javascript" src="js/productos_index.js"></script>
+
+  <script type="text/javascript" src="FrontEnd/js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/SmoothScroll.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.scrollTo.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.localScroll.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.viewport.mini.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.countTo.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.appear.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.parallax-1.1.3.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.fitvids.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.magnific-popup.min.js"></script>
+  <!-- Replace test API Key "AIzaSyAZsDkJFLS0b59q7cmW0EprwfcfUA8d9dg" with your own one below
+        **** You can get API Key here - https://developers.google.com/maps/documentation/javascript/get-api-key -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLWHiMiLiN0kWzpF19YExg4myRUUi2L6Y"></script>
+  <script type="text/javascript" src="FrontEnd/js/gmap3.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/wow.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.simple-text-rotator.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/all.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/contact-form.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.ajaxchimp.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.mb.YTPlayer.js"></script>
+  <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+
+</body>
+
+</html>

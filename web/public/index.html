@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html>
+<!--
+class="loading">
+-->
+<head>
+  <title>Barbero &mdash; Express</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="author" content="Ramla Software">
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  <meta name="viewport" content="width=device-width,   initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- GOOGLE -->
+   <meta name="google-signin-client_id" content="634083713883-822sguv0b9eop1igmerqkp8hhi12dk94.apps.googleusercontent.com">
+   <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="FrontEnd/images/favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="FrontEnd/css/bootstrap.min.css">
+  <link rel="stylesheet" href="FrontEnd/css/style.css">
+  <link rel="stylesheet" href="FrontEnd/css/style-responsive.css">
+  <link rel="stylesheet" href="FrontEnd/css/animate.min.css">
+  <link rel="stylesheet" href="FrontEnd/css/vertical-rhythm.min.css">
+  <link rel="stylesheet" href="FrontEnd/css/owl.carousel.css">
+  <link rel="stylesheet" href="FrontEnd/css/magnific-popup.css">
+  <link rel="stylesheet" href="FrontEnd/css/YTPlayer.css">
+
+
+</head>
+ <body class="appear-animate" onload="onLoad()">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="loader">Loading...</div>
+        </div>
+        <!-- End Page Loader -->
+
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+
+            <!-- Navigation panel -->
+            <nav class="main-nav dark transparent stick-fixed">
+                <div class="full-wrapper relative clearfix">
+                    <!-- Logo ( * your text or image into link tag *) -->
+                    <div class="nav-logo-wrap local-scroll" style="padding-top: 10px;">
+                        <a href="#top" class="logo" id="infoUsuario">
+                            <p><img align="left" src="FrontEnd/images/logo/logoWhiteNavBar.png"/>BE</p>
+                        </a>
+                    </div>
+
+                    <div class="mobile-nav">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <!-- Main Menu -->
+                    <div class="inner-nav desktop-nav">
+                      <ul class="clearlist scroll-nav local-scroll">
+                        <li class="active"><a href="index.html">Inicio</a></li>
+                       <!-- <li><a href="buscar-4columnas.html">Productos</a></li>    COMENTADO POR NUEVO INDEX  -->
+                        <li id="iniciar/cerrar"><a href="login.html">iniciar sesión</a></li>
+                        <li id="cantidadPedidos"><a href="FrontEnd/vistas/carritoCompras.html"><i class="fa fa-shopping-cart"></i> Carrito(0)</a></li>
+                        <li><a href="FrontEnd/vistas/terminosLegales.html">Terminos legales</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navigation panel -->
+
+
+            <!-- Head Section -->
+            <section class="page-section bg-dark-alfa-30" data-background="FrontEnd/images/full-width-images/section-bg-10.jpg">
+                <div class="relative container align-left">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <h1 class="hs-line-11 font-alt mb-20 mb-xs-0">Productos</h1>
+                            <div class="hs-line-4 font-alt">
+                                Tenemos los productos de la mejor calidad, al mejor precio.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mt-30">
+                            <div class="mod-breadcrumbs font-alt align-right">
+                                <a href="index.html">Inicio</a>&nbsp;/&nbsp;<a href="#">Productos</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Head Section -->
+
+             <div class="search-wrap">
+                <button class="search-button animate" type="submit" title="Start Search" onclick="Buscar()">
+                    <i class="fa fa-search"></i>
+                </button>
+                <input type="text" class="form-control search-field" id="srchFld" placeholder="Buscar..." style="background-color: black;">
+            </div>
+            <!-- Section -->
+
+            <div class="align-left pt-20">
+                <button class="submit_btn btn btn-mod btn-medium btn-round" id="login-btn" onclick="Recargar()">Volver</button>
+            </div>
+
+            <section class="page-section" style="padding-top: 40px;">
+                <div class="container relative">
+                    <div class="row">
+
+                        <!-- Content -->
+                        <div class="col-sm-12">
+
+                            <!-- Shop options -->
+                            <div class="clearfix mb-40">
+
+                                <div class="left section-text mt-10">
+                                    Mostrando x - x de X productos
+                                </div>
+
+                                <div class="right">
+                                    <form method="post" action="#" class="form">
+                                        <select class="input-md round">
+                                            <option>Ordenar</option>
+                                            <option>Ordenar por precio: Bajo a alto</option>
+                                            <option>Ordenar por precio: Alto a bajo</option>
+                                        </select>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <!-- End Shop options -->
+
+                            <div class="row multi-columns-row" id="blockView">
+
+
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="pagination" id = "paginas">
+                                <a href=""><i class="fa fa-angle-left"></i></a>
+                                <a href="" class="active">1</a>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a class="no-active">...</a>
+                                <a href="">9</a>
+                                <a href=""><i class="fa fa-angle-right"></i></a>
+                            </div>
+                            <!-- End Pagination -->
+
+                        </div>
+                        <!-- End Content -->
+
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Section -->
+
+
+            <!-- Divider -->
+            <hr class="mt-0 mb-0"/>
+            <!-- End Divider -->
+
+
+            <!-- Foter -->
+            <footer class="page-section bg-gray-lighter footer pb-60">
+                <div class="container">
+
+                    <!-- Footer Logo -->
+                    <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.5s">
+                        <a href="#top"><img src="FrontEnd/images/logo/logoDark.png" width="150" height="70" alt="" /></a>
+                    </div>
+                    <!-- End Footer Logo -->
+
+                    <!-- Social Links -->
+                    <div class="footer-social-links mb-110 mb-xs-60">
+                        <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
+                        <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                    <!-- End Social Links -->
+
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+
+                        <!-- Copyright -->
+                        <div class="footer-copy font-alt">
+                            <a href="http://themeforest.net/user/theme-guru/portfolio" target="_blank">&copy; Barbero Express 2017</a>.
+                        </div>
+                        <!-- End Copyright -->
+
+                        <div class="footer-made">
+                            Desarrollado por Ramla Software.
+                        </div>
+
+                    </div>
+                    <!-- End Footer Text -->
+
+                 </div>
+
+
+                 <!-- Top Link -->
+                 <div class="local-scroll">
+                     <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+                 </div>
+                 <!-- End Top Link -->
+
+            </footer>
+            <!-- End Foter -->
+
+
+        </div>
+        <!-- End Page Wrap -->
+
+
+        <!-- JS -->
+  <script type="text/javascript" src="FrontEnd/js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/SmoothScroll.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.scrollTo.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.localScroll.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.viewport.mini.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.countTo.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.appear.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.parallax-1.1.3.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.fitvids.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.magnific-popup.min.js"></script>
+  <!-- Replace test API Key "AIzaSyAZsDkJFLS0b59q7cmW0EprwfcfUA8d9dg" with your own one below
+        **** You can get API Key here - https://developers.google.com/maps/documentation/javascript/get-api-key -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLWHiMiLiN0kWzpF19YExg4myRUUi2L6Y"></script>
+  <script type="text/javascript" src="FrontEnd/js/gmap3.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/wow.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.simple-text-rotator.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/all.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/contact-form.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.ajaxchimp.min.js"></script>
+  <script type="text/javascript" src="FrontEnd/js/jquery.mb.YTPlayer.js"></script>
+  <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+
+        <!--BASE DE DATOS -->
+        <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
+        <!-- FIREBASE Y FUNCIONES GENERICAS -->
+        <script type="text/javascript" src="js/firebaseBarbero.js"></script>
+
+        <!-- JS PERSONALIZADO -->
+
+        <script type="text/javascript" src="js/productos.js"></script>
+
+
+    </body>
+
+</html>

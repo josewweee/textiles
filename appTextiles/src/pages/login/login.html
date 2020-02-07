@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Login/Registro</ion-title>  
+    <ion-buttons start>
+        <button menuToggle>
+            <ion-icon name="close" color="primary" (click)="cancelar()"></ion-icon>
+        </button>
+    </ion-buttons>  
+  </ion-toolbar>  
+</ion-header>
+<ion-content>    
+   <!--  <img src="../../assets/imgs/tarjeta.jpg" class="slide-image"/>   -->  
+    <ion-list padding>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating >Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      <a padding href="https://docs.google.com/document/d/1rk0Ft5SqRf7JsSpf4UVtTxITgL2P7N2ShAke9WieqRI/edit#">VER POLÍTICA DE PRIVACIDAD</a>
+      <hr>
+      <a padding href="https://docs.google.com/document/d/156_bmoPZ3u0pyPeF3-ptuUrrrNkXkXNmB-bAZZWxcgg/edit#heading=h.h10pw64smgv2">VER TÉRMINOS Y CONDICIONES</a>
+      <hr>       
+    </ion-list>
+    <ion-list>
+      <button style="display: block; margin:auto;" ion-button color="primary" (click)="loginWithEmail()">Iniciar Sesión</button>
+      <button style="display: block; margin:auto;top: 10px;" ion-button color="primary" (click)="registerWithEmail()">Registrarse</button>
+    </ion-list>
+      <img src="../../assets/imgs/tarjeta.jpg" class="slide-image"/>
+</ion-content>

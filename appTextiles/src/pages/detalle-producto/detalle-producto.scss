@@ -1,0 +1,51 @@
+page-detalle-producto {
+  .image-container {
+    min-height: 100px;
+    background-size: cover;
+  }
+
+  .textDiseños{
+    text-align: center;
+    font-size: large;
+  }
+
+}
+
+.colorselect {
+  .select-text {
+      width: 75px;
+      border-radius: 5px;
+  }
+
+  .alert-radio-inner,
+  .alert-radio-icon,
+  .alert-radio-label {
+      display: none;
+  }
+
+  &.colorselected:before {
+      content: '\2713';
+      color: white;
+      z-index: 999999;
+      width: 100%;
+      height: 100%;
+      font-size: 33px;
+      left: 50%;
+      top: 50%;
+      position: relative;
+      transform: translate(-50%);
+  }
+
+  $colorsToSelect: "#84652F" "#8E9196" "#E0A82E" "#DD4E26" "#737975" "#9CA4A6" "#81987E" "#93826E" "#90012C" "#9A192F" "#860517" "#980D4E" "#034383" "#A3870A" "#8D0C20" "#0F1120" "#17227B" "#7A1F31" "#181619" "#AC6FAB" "#354B49" "#966F9C" "#AD206C" "#5E222C" "#6D000D" "#0B0B0D" "#007F54" "#358ED8" "#343338" "#75002F" "#CEE0EA" "#7DD2D9" "#ED5900" "#D3CE00" "#2A006F" "#4000C6" "#8B96AA" "#26785B" "#6A7C87" "#4B5FB9" "#647342" "#DA5094" "#7A0324" "#311460" "#C14D2D" "#67A7A5" "#172122" "#847855" "#1E6B45" "#93A633" "#35677D" "#7F5678" "#AE060E" "#677B99" "#970863" "#B27376" "#348E93" "#B09F01" "#C1908B" "#111113" "#808791" "#9E9A5A" "#A10A1B" "#2263CB" "#5233AB" "#35AFE2" "#CEC344" "#84652F" "#8E9196" "#E0A82E" "#DD4E26" "#C9243C" "#1E5DCE" "#272929" "#852B45" "#443631" "#AECC6B" "#D0DBE1" "#121634" "#5DBCD2" "#981727" "#E1B549" "#0C4F84" "#9A958E" "#869042" "#881539" "#243380" "#A14111" "#BCC4C2" "#3F6033" "#C585AD" "#167086" "#28236D" "#6A387E" "#EEF0ED" "#6687A9" "#A8AEA1" "#97E927" "#98679E" "#016C27" "#C45857" "#C87191" "#1B5A74" "#C64375" "#A80022" "#CB3B50" "#2174F9" "#FD7F65" "#C92E95" "#A99F6C" "#AE8A4E" "#0287C8" "#D6A939" "#C2ABB5" "#44A9BB" "#A20111" "#844A59" "#3C0014" "#A77188" "#111111" "#B20074" "#550080" "#C2D310" "#8BAAD6" "#4B9DF3" "#9089C7" "#DCE0DF" "#927E40" "#928B45" "#576CBD" "#9FA99A" "#976486" "#A50053" "#8A0403";
+
+  @each $colorOption in $colorsToSelect {
+      $colorWithoutHash: str-slice($colorOption, 2, 7);
+
+      &.color_#{$colorWithoutHash} {
+          &, & .select-text {
+              color: #{$colorOption};
+              background-color: #{$colorOption};
+          }
+      }
+  }
+}

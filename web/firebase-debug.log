@@ -1,0 +1,28 @@
+[debug] [2018-08-16T07:57:21.780Z] ----------------------------------------------------------------------
+[debug] [2018-08-16T07:57:21.782Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-08-16T07:57:21.783Z] CLI Version:   3.15.0
+[debug] [2018-08-16T07:57:21.783Z] Platform:      win32
+[debug] [2018-08-16T07:57:21.783Z] Node Version:  v6.10.2
+[debug] [2018-08-16T07:57:21.783Z] Time:          Thu Aug 16 2018 02:57:21 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-08-16T07:57:21.783Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-16T07:57:21.794Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-16T07:57:21.794Z] > authorizing via signed-in user
+[debug] [2018-08-16T07:57:21.797Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/barbero-express  
+ Thu Aug 16 2018 02:57:21 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-08-16T07:57:22.404Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-16T07:57:22.405Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/barbero-express/tokens  
+ Thu Aug 16 2018 02:57:22 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-08-16T07:57:22.865Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\USER\Documents\BarberExpress'...
+[info] 
+[debug] [2018-08-16T07:57:22.868Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/barbero-express  
+ Thu Aug 16 2018 02:57:22 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-08-16T07:57:23.648Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-16T07:57:23.648Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1021518127997/clients/_:getWebAppConfig  
+ Thu Aug 16 2018 02:57:23 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-08-16T07:57:24.346Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

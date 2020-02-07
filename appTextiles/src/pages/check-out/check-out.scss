@@ -1,0 +1,18 @@
+page-check-out {
+    
+    .btnPrev{
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        font-size: 25px;
+        z-index: 2;
+    }
+
+    .btnNext{
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        font-size: 25px;
+        z-index: 2;
+    }
+}

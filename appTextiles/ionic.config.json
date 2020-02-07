@@ -1,0 +1,7 @@
+{
+  "name": "appTextiles",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

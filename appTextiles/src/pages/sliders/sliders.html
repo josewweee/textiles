@@ -1,0 +1,41 @@
+<!--
+  Generated template for the SlidersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Textiles Prestigio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-slides pager="true">
+        <ion-slide *ngFor="let slide of slider">
+          <div>
+            <ion-buttons end>
+              <button ion-button style="background-color: white; color: black;" (click)="irPantallaPrincipal()" >Omitir</button>
+            </ion-buttons>
+          </div>
+          <div style="padding-bottom: 60%;">
+            <img [src]='slide.image'/>
+            <h2 [innerHTML]="slide.title"></h2>
+            <p [innerHTML]="slide.description"></p>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="../assets/imgs/rollosSliders.jpg" class="slide-image"/>
+          <h2 class="slide-title">¡Vayamos a la tienda!</h2>
+          <button ion-button large clear icon-end color="primary" (click)="irPantallaPrincipal()">
+            Continuar
+            <ion-icon name="arrow-foward"></ion-icon>
+          </button>
+        </ion-slide>
+    </ion-slides>
+
+</ion-content>
